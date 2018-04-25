@@ -1,4 +1,4 @@
-package com.dhcc.ms.validator;
+package com.dhcc.ms.datatype;
 
 /**
  * Hello world!
