@@ -38,4 +38,16 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>Releases</id>
+			<name>internal corporate repository</name>
+			<url>http://113.140.81.67:9012/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<name>internal corporate snapshots repository</name>
+			<url>http://113.140.81.67:9012/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
