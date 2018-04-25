@@ -5,12 +5,23 @@ import java.util.List;
 
 import com.dhcc.ms.schema.BaseSchema;
 
-public enum DefaultCustomLevel implements BaseSchema<Integer> {
-    NORMAL("普通用户", 1), SILVER("银卡用户", 2), GOLD("金卡用户", 3);
+public enum DefaultCustomerLevel implements BaseSchema<Integer> {
+    /**
+     * 普通用户
+     */
+    NORMAL("普通用户", 1), 
+    /**
+     * 银卡用户
+     */
+    SILVER("银卡用户", 2), 
+    /**
+     * 金卡用户
+     */
+    GOLD("金卡用户", 3);
     private String levelName;
     private int level;
 
-    private DefaultCustomLevel(String levelName, int level) {
+    private DefaultCustomerLevel(String levelName, int level) {
         this.setLevelName(levelName);
         this.setLevel(level);
     }
@@ -34,15 +45,15 @@ public enum DefaultCustomLevel implements BaseSchema<Integer> {
 
     public List<Integer> getValues() {
         List<Integer> intList = new ArrayList<Integer>();
-        DefaultCustomLevel[] values = DefaultCustomLevel.values();
-        for(DefaultCustomLevel value : values) {
+        DefaultCustomerLevel[] values = DefaultCustomerLevel.values();
+        for(DefaultCustomerLevel value : values) {
             intList.add(value.getLevel());
         }
         return intList;
     }
 
-    public static DefaultCustomLevel getByValue(int value) {
-        for (DefaultCustomLevel item : values()) {  
+    public static DefaultCustomerLevel getByValue(int value) {
+        for (DefaultCustomerLevel item : values()) {  
             if (item.getLevel() == value) {  
                 return item;  
             }  

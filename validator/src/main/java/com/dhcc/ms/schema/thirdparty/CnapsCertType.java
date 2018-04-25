@@ -6,7 +6,22 @@ import java.util.List;
 import com.dhcc.ms.schema.BaseSchema;
 
 public enum CnapsCertType implements BaseSchema<String> {
-    ID_CARD("身份证", "0"), RESIDENCE_BOOKLET("户口簿", "1"), MILI_CERT("军官证", "2"), OTHER("其他证件", "9");
+    /**
+     * 身份证
+     */
+    ID_CARD("身份证", "1"), 
+    /**
+     * 户口簿
+     */
+    RESIDENCE_BOOKLET("户口簿", "2"), 
+    /**
+     * 军官证
+     */
+    MILI_CERT("军官证", "3"), 
+    /**
+     * 其他证件
+     */
+    OTHER("其他证件", "9");
     private String certName;
     private String certType;
 

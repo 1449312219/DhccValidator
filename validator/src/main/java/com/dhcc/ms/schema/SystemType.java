@@ -1,7 +1,18 @@
 package com.dhcc.ms.schema;
 
 public enum SystemType {
-    ACCT("核心系统", 1), CNAPS("二代支付系统", 2), ECIF("客户信息系统", 3);
+    /**
+     * 核心系统
+     */
+    ACCT("核心系统", 1), 
+    /**
+     * 二代支付系统
+     */
+    CNAPS("二代支付系统", 2), 
+    /**
+     * 客户信息系统
+     */
+    ECIF("客户信息系统", 3);
     
     private String systemName;
     private int index;

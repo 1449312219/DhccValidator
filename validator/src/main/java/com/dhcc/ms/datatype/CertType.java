@@ -8,14 +8,20 @@ import com.dhcc.ms.schema.thirdparty.AcctCertType;
 import com.dhcc.ms.schema.thirdparty.CnapsCertType;
 import com.dhcc.ms.schema.thirdparty.EcifCertType;
 import com.dhcc.ms.validator.OneOfStr;
-
+/**
+ * 证件类型定义
+ * @author Huangzuzhen
+ *
+ */
 public class CertType implements BaseDataType<String> {
+    /**
+     * 证件类型
+     */
     @Length(min = 2, max = 2, message = "类型长度必须为2位")
     @OneOfStr(value = DefaultCertType.class, message = "非法数据")
     private String certType;
 
     public String getCertType() {
-        DefaultCertType.values();
         return certType;
     }
 

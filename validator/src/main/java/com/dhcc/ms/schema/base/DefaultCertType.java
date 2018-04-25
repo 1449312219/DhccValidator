@@ -6,7 +6,22 @@ import java.util.List;
 import com.dhcc.ms.schema.BaseSchema;
 
 public enum DefaultCertType implements BaseSchema<String> {
-    ID_CARD("身份证", "01"), RESIDENCE_BOOKLET("户口簿", "02"), MILI_CERT("军官证", "03"), OTHER("其他证件", "99");
+    /**
+     * 身份证
+     */
+    ID_CARD("身份证", "01"), 
+    /**
+     * 户口簿
+     */
+    RESIDENCE_BOOKLET("户口簿", "02"), 
+    /**
+     * 军官证
+     */
+    MILI_CERT("军官证", "03"), 
+    /**
+     * 其他证件
+     */
+    OTHER("其他证件", "99");
     private String certName;
     private String certType;
 
@@ -34,18 +49,18 @@ public enum DefaultCertType implements BaseSchema<String> {
     public List<String> getValues() {
         List<String> strList = new ArrayList<String>();
         DefaultCertType[] values = DefaultCertType.values();
-        for(DefaultCertType value : values) {
+        for (DefaultCertType value : values) {
             strList.add(value.getCertType());
         }
         return strList;
     }
 
     public static DefaultCertType getByValue(String value) {
-        for (DefaultCertType item : values()) {  
-            if (item.getCertType().equals(value)) {  
-                return item;  
-            }  
-        }  
+        for (DefaultCertType item : values()) {
+            if (item.getCertType().equals(value)) {
+                return item;
+            }
+        }
         return null;
     }
 
